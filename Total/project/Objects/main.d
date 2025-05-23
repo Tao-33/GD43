@@ -45,3 +45,4 @@
 .\objects\main.o: ..\Function\Function.h
 .\objects\main.o: ..\HeaderFiles\HeaderFiles.h
 .\objects\main.o: ..\HardWare\LED\LED.h
+.\objects\main.o: ..\HardWare\Key.h

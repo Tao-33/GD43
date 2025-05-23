@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32F470</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CMSIS;..\Startup;..\Library\GD32F4xx_standard_peripheral\Include;..\User;..\HeaderFiles;..\Function;..\HardWare\LED;..\CMSIS\GD\GD32F4xx\Include</IncludePath>
+              <IncludePath>..\CMSIS;..\Startup;..\Library\GD32F4xx_standard_peripheral\Include;..\User;..\HeaderFiles;..\Function;..\HardWare\LED;..\CMSIS\GD\GD32F4xx\Include;..\HardWare</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -409,6 +409,16 @@
               <FileName>LED.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HardWare\LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>Key.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\Key.h</FilePath>
+            </File>
+            <File>
+              <FileName>Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\Key.c</FilePath>
             </File>
           </Files>
         </Group>

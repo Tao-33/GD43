@@ -45,3 +45,5 @@
 .\objects\function.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\function.o: ..\Function\Function.h
 .\objects\function.o: ..\HardWare\LED\LED.h
+.\objects\function.o: ..\HardWare\Key.h
+.\objects\function.o: ..\HeaderFiles\HeaderFiles.h
