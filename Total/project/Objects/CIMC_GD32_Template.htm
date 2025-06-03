@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\Objects\CIMC_GD32_Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\CIMC_GD32_Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Fri May 23 21:31:54 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Tue Jun 03 20:53:47 2025
 <BR><P>
-<H3>Maximum Stack Usage =         44 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =         48 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; System_Init &rArr; Led_Init &rArr; gpio_output_options_set
+main &rArr; System_Init &rArr; EXTI_Pin_Init &rArr; nvic_irq_enable
 <P>
 <H3>
 Mutually Recursive functions
@@ -53,7 +53,7 @@ Function Pointers
  <LI><a href="#[11]">EXTI1_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
  <LI><a href="#[12]">EXTI2_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
  <LI><a href="#[13]">EXTI3_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
- <LI><a href="#[14]">EXTI4_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
+ <LI><a href="#[14]">EXTI4_IRQHandler</a> from exti.o(i.EXTI4_IRQHandler) referenced from startup_gd32f450_470.o(RESET)
  <LI><a href="#[21]">EXTI5_9_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
  <LI><a href="#[e]">FMC_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
  <LI><a href="#[5a]">FPU_IRQHandler</a> from startup_gd32f450_470.o(.text) referenced from startup_gd32f450_470.o(RESET)
@@ -127,7 +127,7 @@ Global Symbols
 <P><STRONG><a name="[65]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(.text)
 </UL>
-<P><STRONG><a name="[78]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[84]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[66]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
@@ -137,15 +137,15 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[79]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[85]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[7a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[86]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[7b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[87]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[7c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[88]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[7d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[89]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_gd32f450_470.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
@@ -254,9 +254,6 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
 <P><STRONG><a name="[13]"></a>EXTI3_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_gd32f450_470.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
-</UL>
-<P><STRONG><a name="[14]"></a>EXTI4_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_gd32f450_470.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
 <P><STRONG><a name="[21]"></a>EXTI5_9_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_gd32f450_470.o(.text))
@@ -427,7 +424,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[7e]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[8a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
@@ -435,27 +432,74 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, gd32f4xx_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
+<P><STRONG><a name="[14]"></a>EXTI4_IRQHandler</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, exti.o(i.EXTI4_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI4_IRQHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_toggle
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exti_interrupt_flag_get
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exti_interrupt_flag_clear
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
+</UL>
+<P><STRONG><a name="[6c]"></a>EXTI_Pin_Init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, exti.o(i.EXTI_Pin_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = EXTI_Pin_Init &rArr; nvic_irq_enable
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;syscfg_exti_line_config
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exti_interrupt_flag_clear
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exti_init
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+</UL>
+
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_it.o(i.HardFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
-<P><STRONG><a name="[69]"></a>Led_Flash</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, led.o(i.Led_Flash))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Led_Flash
+<P><STRONG><a name="[71]"></a>KEY_State</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, key.o(i.KEY_State))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = KEY_State
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_set
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_reset
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_1ms
+<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_input_bit_get
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_1ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
 </UL>
 
-<P><STRONG><a name="[6d]"></a>Led_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, led.o(i.Led_Init))
+<P><STRONG><a name="[74]"></a>Key_Init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, key.o(i.Key_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = Key_Init &rArr; gpio_mode_set
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+</UL>
+
+<P><STRONG><a name="[76]"></a>Led_Flash</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, led.o(i.Led_Flash))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Led_Flash
+</UL>
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_set
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_reset
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_1ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
+</UL>
+
+<P><STRONG><a name="[79]"></a>Led_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, led.o(i.Led_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = Led_Init &rArr; gpio_output_options_set
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_output_options_set
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode_set
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rcu_periph_clock_enable
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_output_options_set
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_mode_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+</UL>
+
+<P><STRONG><a name="[7b]"></a>Led_OFF</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, led.o(i.Led_OFF))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Led_OFF
+</UL>
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_bit_reset
+</UL>
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
 </UL>
 
 <P><STRONG><a name="[3]"></a>MemManage_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_it.o(i.MemManage_Handler))
@@ -473,22 +517,24 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, gd32f4xx_it.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_decrement
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_decrement
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
 <P><STRONG><a name="[64]"></a>SystemInit</STRONG> (Thumb, 194 bytes, Stack size 8 bytes, system_gd32f4xx.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SystemInit &rArr; system_clock_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(.text)
 </UL>
-<P><STRONG><a name="[73]"></a>System_Init</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, function.o(i.System_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = System_Init &rArr; Led_Init &rArr; gpio_output_options_set
+<P><STRONG><a name="[7e]"></a>System_Init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, function.o(i.System_Init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = System_Init &rArr; EXTI_Pin_Init &rArr; nvic_irq_enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -496,85 +542,133 @@ Global Symbols
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_gd32f450_470.o(RESET)
 </UL>
-<P><STRONG><a name="[75]"></a>UsrFunction</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, function.o(i.UsrFunction))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UsrFunction &rArr; Led_Flash
+<P><STRONG><a name="[80]"></a>UsrFunction</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, function.o(i.UsrFunction))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = UsrFunction &rArr; KEY_State
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_OFF
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
 </UL>
 <BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7f]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[8b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[80]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[8c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[81]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[8d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
-<P><STRONG><a name="[6c]"></a>delay_1ms</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, systick.o(i.delay_1ms))
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+<P><STRONG><a name="[73]"></a>delay_1ms</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, systick.o(i.delay_1ms))
+<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
 </UL>
 
-<P><STRONG><a name="[71]"></a>delay_decrement</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, systick.o(i.delay_decrement))
+<P><STRONG><a name="[7c]"></a>delay_decrement</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, systick.o(i.delay_decrement))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
-<P><STRONG><a name="[6b]"></a>gpio_bit_reset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_bit_reset))
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+<P><STRONG><a name="[6f]"></a>exti_init</STRONG> (Thumb, 184 bytes, Stack size 8 bytes, gd32f4xx_exti.o(i.exti_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = exti_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
 </UL>
 
-<P><STRONG><a name="[6a]"></a>gpio_bit_set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_bit_set))
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+<P><STRONG><a name="[6b]"></a>exti_interrupt_flag_clear</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gd32f4xx_exti.o(i.exti_interrupt_flag_clear))
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_IRQHandler
 </UL>
 
-<P><STRONG><a name="[6f]"></a>gpio_mode_set</STRONG> (Thumb, 78 bytes, Stack size 20 bytes, gd32f4xx_gpio.o(i.gpio_mode_set))
+<P><STRONG><a name="[69]"></a>exti_interrupt_flag_get</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, gd32f4xx_exti.o(i.exti_interrupt_flag_get))
+<BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_IRQHandler
+</UL>
+
+<P><STRONG><a name="[78]"></a>gpio_bit_reset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_bit_reset))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_OFF
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+</UL>
+
+<P><STRONG><a name="[77]"></a>gpio_bit_set</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_bit_set))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Flash
+</UL>
+
+<P><STRONG><a name="[6a]"></a>gpio_bit_toggle</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_bit_toggle))
+<BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_IRQHandler
+</UL>
+
+<P><STRONG><a name="[72]"></a>gpio_input_bit_get</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gd32f4xx_gpio.o(i.gpio_input_bit_get))
+<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_State
+</UL>
+
+<P><STRONG><a name="[75]"></a>gpio_mode_set</STRONG> (Thumb, 78 bytes, Stack size 20 bytes, gd32f4xx_gpio.o(i.gpio_mode_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_mode_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
 </UL>
 
-<P><STRONG><a name="[70]"></a>gpio_output_options_set</STRONG> (Thumb, 66 bytes, Stack size 20 bytes, gd32f4xx_gpio.o(i.gpio_output_options_set))
+<P><STRONG><a name="[7a]"></a>gpio_output_options_set</STRONG> (Thumb, 66 bytes, Stack size 20 bytes, gd32f4xx_gpio.o(i.gpio_output_options_set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = gpio_output_options_set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
+<BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
 </UL>
 
 <P><STRONG><a name="[63]"></a>main</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, main.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = main &rArr; System_Init &rArr; Led_Init &rArr; gpio_output_options_set
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = main &rArr; System_Init &rArr; EXTI_Pin_Init &rArr; nvic_irq_enable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsrFunction
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[6e]"></a>rcu_periph_clock_enable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, gd32f4xx_rcu.o(i.rcu_periph_clock_enable))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
+<P><STRONG><a name="[70]"></a>nvic_irq_enable</STRONG> (Thumb, 186 bytes, Stack size 24 bytes, gd32f4xx_misc.o(i.nvic_irq_enable))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = nvic_irq_enable
+</UL>
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_priority_group_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
 </UL>
 
-<P><STRONG><a name="[74]"></a>systick_config</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, systick.o(i.systick_config))
+<P><STRONG><a name="[81]"></a>nvic_priority_group_set</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, gd32f4xx_misc.o(i.nvic_priority_group_set))
+<BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvic_irq_enable
+</UL>
+
+<P><STRONG><a name="[6d]"></a>rcu_periph_clock_enable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, gd32f4xx_rcu.o(i.rcu_periph_clock_enable))
+<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Init
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Led_Init
+</UL>
+
+<P><STRONG><a name="[6e]"></a>syscfg_exti_line_config</STRONG> (Thumb, 166 bytes, Stack size 16 bytes, gd32f4xx_syscfg.o(i.syscfg_exti_line_config))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = syscfg_exti_line_config
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Pin_Init
+</UL>
+
+<P><STRONG><a name="[7f]"></a>systick_config</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, systick.o(i.systick_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = systick_config &rArr; NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Init
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[77]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, systick.o(i.NVIC_SetPriority))
+<P><STRONG><a name="[83]"></a>NVIC_SetPriority</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, systick.o(i.NVIC_SetPriority))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NVIC_SetPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
+<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_config
 </UL>
 
-<P><STRONG><a name="[76]"></a>system_clock_240m_25m_hxtal</STRONG> (Thumb, 250 bytes, Stack size 0 bytes, system_gd32f4xx.o(i.system_clock_240m_25m_hxtal))
-<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
+<P><STRONG><a name="[82]"></a>system_clock_240m_25m_hxtal</STRONG> (Thumb, 250 bytes, Stack size 0 bytes, system_gd32f4xx.o(i.system_clock_240m_25m_hxtal))
+<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_config
 </UL>
 
-<P><STRONG><a name="[72]"></a>system_clock_config</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_gd32f4xx.o(i.system_clock_config))
+<P><STRONG><a name="[7d]"></a>system_clock_config</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_gd32f4xx.o(i.system_clock_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = system_clock_config
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_240m_25m_hxtal
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;system_clock_240m_25m_hxtal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>

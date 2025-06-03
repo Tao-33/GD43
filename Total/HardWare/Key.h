@@ -12,7 +12,7 @@
 #define KEY_CLK         RCU_GPIOE
 
 void Key_Init(void);									//°´¼ü³õÊ¼»¯
-uint8_t KEY_Stat(uint32_t port, uint16_t pin);		//°´¼ü×´Ì¬É¨Ãè
+uint8_t KEY_State(uint32_t port, uint16_t pin);		//°´¼ü×´Ì¬É¨Ãè
 
 #define __KEY_H
 #endif

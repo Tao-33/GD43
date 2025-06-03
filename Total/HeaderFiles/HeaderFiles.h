@@ -15,6 +15,9 @@
 #include "gd32f4xx_libopt.h"
 #include "gd32f4xx_gpio.h"
 #include "gd32f4xx_rcu.h"
+#include "gd32f4xx_syscfg.h"
+#include "gd32f4xx_exti.h"//外部中断库
+#include "gd32f4xx_misc.h"//包含了外部中断的NVIC配置函数
 #include "systick.h"
 #include <stdio.h>
 #include <stdint.h>
@@ -22,6 +25,7 @@
 #include "Function.h"     // 执行函数
 #include "LED.h"
 #include "Key.h"
+#include "EXTI.h"
 
 
 

@@ -4,6 +4,7 @@
 ".\objects\systick.o"
 ".\objects\led.o"
 ".\objects\key.o"
+".\objects\exti.o"
 ".\objects\function.o"
 ".\objects\system_gd32f4xx.o"
 ".\objects\gd32f4xx_adc.o"

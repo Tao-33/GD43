@@ -10,9 +10,10 @@ void Led_Init(void){
 
 void Led_Flash(void){
 	gpio_bit_set(GPIOE,GPIO_PIN_2);
-	gpio_bit_reset(GPIOE,GPIO_PIN_3);
 	delay_1ms(500);
-	gpio_bit_set(GPIOE,GPIO_PIN_3);
 	gpio_bit_reset(GPIOE,GPIO_PIN_2);
 }
 
+void Led_OFF(void){
+	gpio_bit_reset(GPIOE,GPIO_PIN_2);
+}

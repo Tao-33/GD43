@@ -102,6 +102,7 @@ void syscfg_exmc_swap_config(uint32_t syscfg_exmc_swap)
     SYSCFG_CFG0 = (reg | syscfg_exmc_swap);
 }
 
+//函数用于外部中断线配置
 /*!
     \brief    configure the GPIO pin as EXTI Line
     \param[in]  exti_port: specify the GPIO port used in EXTI
