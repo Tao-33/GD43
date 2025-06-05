@@ -430,6 +430,16 @@
               <FileType>1</FileType>
               <FilePath>..\HardWare\EXTI.c</FilePath>
             </File>
+            <File>
+              <FileName>Serial.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\Serial.h</FilePath>
+            </File>
+            <File>
+              <FileName>Serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\Serial.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

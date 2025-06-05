@@ -31,7 +31,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -41,7 +41,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x65A7AAB5)
 I (..\User\systick.h)(0x61ADC343)
 F (..\User\main.c)(0x683D4A89)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -72,7 +72,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -87,6 +87,7 @@ I (..\Function\Function.h)(0x6830716F)
 I (..\HardWare\LED\LED.h)(0x683EE636)
 I (..\HardWare\Key.h)(0x683D4A89)
 I (..\HardWare\EXTI.h)(0x683EEFD3)
+I (..\HardWare\Serial.h)(0x683FFE00)
 F (..\User\systick.c)(0x61ADC343)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\systick.o --omf_browse .\objects\systick.crf --depend .\objects\systick.d)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
@@ -118,7 +119,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -129,7 +130,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x65A7AAB5)
 I (..\User\systick.h)(0x61ADC343)
 F (..\HardWare\LED.h)(0x683EE636)()
 F (..\HardWare\LED.c)(0x683EF059)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
-I (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -160,7 +161,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -175,10 +176,11 @@ I (..\Function\Function.h)(0x6830716F)
 I (..\HardWare\LED\LED.h)(0x683EE636)
 I (..\HardWare\Key.h)(0x683D4A89)
 I (..\HardWare\EXTI.h)(0x683EEFD3)
+I (..\HardWare\Serial.h)(0x683FFE00)
 F (..\HardWare\Key.h)(0x683D4A89)()
 F (..\HardWare\Key.c)(0x683EE0DF)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\key.o --omf_browse .\objects\key.crf --depend .\objects\key.d)
 I (..\HardWare\Key.h)(0x683D4A89)
-I (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -209,7 +211,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -223,9 +225,10 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (..\Function\Function.h)(0x6830716F)
 I (..\HardWare\LED\LED.h)(0x683EE636)
 I (..\HardWare\EXTI.h)(0x683EEFD3)
+I (..\HardWare\Serial.h)(0x683FFE00)
 F (..\HardWare\EXTI.h)(0x683EEFD3)()
-F (..\HardWare\EXTI.c)(0x683EEFDD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\exti.o --omf_browse .\objects\exti.crf --depend .\objects\exti.d)
-I (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)
+F (..\HardWare\EXTI.c)(0x683FF4AD)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\exti.o --omf_browse .\objects\exti.crf --depend .\objects\exti.d)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -256,7 +259,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -271,8 +274,10 @@ I (..\Function\Function.h)(0x6830716F)
 I (..\HardWare\LED\LED.h)(0x683EE636)
 I (..\HardWare\Key.h)(0x683D4A89)
 I (..\HardWare\EXTI.h)(0x683EEFD3)
-F (..\Function\Function.c)(0x683EF059)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\function.o --omf_browse .\objects\function.crf --depend .\objects\function.d)
-I (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)
+I (..\HardWare\Serial.h)(0x683FFE00)
+F (..\HardWare\Serial.h)(0x683FFE00)()
+F (..\HardWare\Serial.c)(0x6840035E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\serial.o --omf_browse .\objects\serial.crf --depend .\objects\serial.d)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -303,7 +308,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -318,7 +323,56 @@ I (..\Function\Function.h)(0x6830716F)
 I (..\HardWare\LED\LED.h)(0x683EE636)
 I (..\HardWare\Key.h)(0x683D4A89)
 I (..\HardWare\EXTI.h)(0x683EEFD3)
-F (..\HeaderFiles\HeaderFiles.h)(0x683EEE2A)()
+I (..\HardWare\Serial.h)(0x683FFE00)
+F (..\Function\Function.c)(0x6840035E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\function.o --omf_browse .\objects\function.crf --depend .\objects\function.d)
+I (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)
+I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
+I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\CMSIS\core_cmInstr.h)(0x65A7AAB5)
+I (..\CMSIS\core_cmFunc.h)(0x65A7AAB5)
+I (..\CMSIS\core_cm4_simd.h)(0x65A7AAB5)
+I (..\CMSIS\GD\GD32F4xx\Include\system_gd32f4xx.h)(0x65A7AAB5)
+I (..\User\gd32f4xx_libopt.h)(0x67D91959)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rcu.h)(0x67D91242)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_adc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_can.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_crc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_ctc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_dac.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_dbg.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_dci.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_dma.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_exti.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_fmc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_fwdgt.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_gpio.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_syscfg.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_i2c.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_iref.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_pmu.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x65A7AAB5)
+I (..\User\systick.h)(0x61ADC343)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\Function\Function.h)(0x6830716F)
+I (..\HardWare\LED\LED.h)(0x683EE636)
+I (..\HardWare\Key.h)(0x683D4A89)
+I (..\HardWare\EXTI.h)(0x683EEFD3)
+I (..\HardWare\Serial.h)(0x683FFE00)
+F (..\HeaderFiles\HeaderFiles.h)(0x683FF9F4)()
 F (..\CMSIS\GD\GD32F4xx\Source\system_gd32f4xx.c)(0x67D91E03)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\system_gd32f4xx.o --omf_browse .\objects\system_gd32f4xx.crf --depend .\objects\system_gd32f4xx.d)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
@@ -350,7 +404,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -389,7 +443,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -428,7 +482,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -467,7 +521,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -506,7 +560,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -545,7 +599,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -584,7 +638,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -623,7 +677,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -662,7 +716,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -702,7 +756,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x65A7AAB5)
@@ -741,7 +795,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -779,7 +833,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -818,7 +872,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -857,7 +911,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -896,7 +950,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -935,7 +989,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -975,7 +1029,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1013,7 +1067,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1053,7 +1107,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
@@ -1091,7 +1145,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1130,7 +1184,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1169,7 +1223,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1208,7 +1262,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1247,7 +1301,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1286,7 +1340,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1325,7 +1379,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1365,7 +1419,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1403,7 +1457,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_rtc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
@@ -1411,8 +1465,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_exmc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_ipa.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_tli.h)(0x65A7AAB5)
-F (..\Library\GD32F4xx_standard_peripheral\Source\gd32f4xx_usart.c)(0x65A7AAB6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\gd32f4xx_usart.o --omf_browse .\objects\gd32f4xx_usart.crf --depend .\objects\gd32f4xx_usart.d)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+F (..\Library\GD32F4xx_standard_peripheral\Source\gd32f4xx_usart.c)(0x683FF9F4)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\gd32f4xx_usart.o --omf_browse .\objects\gd32f4xx_usart.crf --depend .\objects\gd32f4xx_usart.d)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
 I (..\CMSIS\core_cm4.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -1482,7 +1536,7 @@ I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_sdio.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_spi.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_timer.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_trng.h)(0x65A7AAB5)
-I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x65A7AAB5)
+I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x683FFE00)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x65A7AAB5)
 I (..\Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_enet.h)(0x65A7AAB5)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)

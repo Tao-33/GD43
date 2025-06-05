@@ -355,9 +355,9 @@ typedef enum {
 /* initialization functions */
 /* reset USART */
 void usart_deinit(uint32_t usart_periph);
-/* configure usart baud rate value */
+/* configure usart baud rate value  配置波特率*/
 void usart_baudrate_set(uint32_t usart_periph, uint32_t baudval);
-/* configure usart parity function */
+/* configure usart parity function 配置校验方式*/
 void usart_parity_config(uint32_t usart_periph, uint32_t paritycfg);
 /* configure usart word length */
 void usart_word_length_set(uint32_t usart_periph, uint32_t wlen);

@@ -47,3 +47,4 @@
 .\objects\led.o: ..\HardWare\LED\LED.h
 .\objects\led.o: ..\HardWare\Key.h
 .\objects\led.o: ..\HardWare\EXTI.h
+.\objects\led.o: ..\HardWare\Serial.h

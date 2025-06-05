@@ -33,6 +33,7 @@ OF SUCH DAMAGE.
 */
 
 #include "gd32f4xx_usart.h"
+#include "gd32f4xx_rcu.h"
 
 /* USART register bit offset */
 #define GP_GUAT_OFFSET            ((uint32_t)8U)       /* bit offset of GUAT in USART_GP */

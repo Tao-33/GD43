@@ -9,12 +9,13 @@ void System_Init(void)
 	Led_Init();
 	Key_Init();
 	EXTI_Pin_Init();
+	Serial_Init();
 }
 
 void UsrFunction(void)
 {
-	
-	
+
+	printf("Hello CIMC");
 	while(1)
 	{
 		if(KEY_State(GPIOE,KEY3_PIN)==1){

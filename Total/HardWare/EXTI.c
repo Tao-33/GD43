@@ -15,7 +15,7 @@ void EXTI_Pin_Init(void){
 void EXTI4_IRQHandler(void){
 	if(RESET!=exti_interrupt_flag_get(EXTI_4)){
 	gpio_bit_toggle(GPIOE,GPIO_PIN_3);//电平翻转
-	exti_interrupt_flag_clear(EXTI_4);
+	exti_interrupt_flag_clear(EXTI_4);//清除中断标志位
 	}
 }
 

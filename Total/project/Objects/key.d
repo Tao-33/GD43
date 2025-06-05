@@ -48,3 +48,4 @@
 .\objects\key.o: ..\HardWare\LED\LED.h
 .\objects\key.o: ..\HardWare\Key.h
 .\objects\key.o: ..\HardWare\EXTI.h
+.\objects\key.o: ..\HardWare\Serial.h
