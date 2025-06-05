@@ -440,6 +440,21 @@
               <FileType>1</FileType>
               <FilePath>..\HardWare\Serial.c</FilePath>
             </File>
+            <File>
+              <FileName>OLED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\OLED.c</FilePath>
+            </File>
+            <File>
+              <FileName>OLED.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\OLED.h</FilePath>
+            </File>
+            <File>
+              <FileName>OLEDfont.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\OLEDfont.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

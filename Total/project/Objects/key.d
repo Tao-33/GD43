@@ -49,3 +49,4 @@
 .\objects\key.o: ..\HardWare\Key.h
 .\objects\key.o: ..\HardWare\EXTI.h
 .\objects\key.o: ..\HardWare\Serial.h
+.\objects\key.o: ..\HardWare\OLED.h
