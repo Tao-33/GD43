@@ -11,6 +11,8 @@ void System_Init(void)
 	EXTI_Pin_Init();
 	Serial_Init();
 	OLED_Init();
+	ADC_Port_Init();
+
 }
 
 void UsrFunction(void)
@@ -26,6 +28,7 @@ void UsrFunction(void)
 		if(KEY_State(GPIOE,KEY3_PIN)==1){
 		Led_OFF();		
 		}*/
+		/*串口测试
 //		// 在主循环手动设置测试数据
 //		Serial_RxPacket[0] = 0xAA; 
 //		Serial_RxFlag = 1;
@@ -41,6 +44,12 @@ void UsrFunction(void)
 			OLED_ShowHexNum(40,15, Serial_RxPacket[3], 2);
 			
 		}
+		*/
+		int adc_value;
+		adc_flag_clear(ADC0,ADC_FLAG_EOC);//清除标志位
+		while(SET!=adc_flag_get(ADC0,ADC_FLAG_EOC)){}
+		adc_value=ADC_RDATA(ADC0);			
+		printf("ADC_Value:%d,%.2f\n",adc_value,3.3*(adc_value/4095.0));
 	}
 }
 

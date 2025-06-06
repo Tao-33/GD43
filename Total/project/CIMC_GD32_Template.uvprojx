@@ -455,6 +455,16 @@
               <FileType>5</FileType>
               <FilePath>..\HardWare\OLEDfont.h</FilePath>
             </File>
+            <File>
+              <FileName>ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>ADC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\ADC.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

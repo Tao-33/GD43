@@ -7,6 +7,7 @@
 ".\objects\exti.o"
 ".\objects\serial.o"
 ".\objects\oled.o"
+".\objects\adc.o"
 ".\objects\function.o"
 ".\objects\system_gd32f4xx.o"
 ".\objects\gd32f4xx_adc.o"

@@ -49,3 +49,4 @@
 .\objects\main.o: ..\HardWare\EXTI.h
 .\objects\main.o: ..\HardWare\Serial.h
 .\objects\main.o: ..\HardWare\OLED.h
+.\objects\main.o: ..\HardWare\ADC.h

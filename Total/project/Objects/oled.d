@@ -50,4 +50,5 @@
 .\objects\oled.o: ..\HardWare\EXTI.h
 .\objects\oled.o: ..\HardWare\Serial.h
 .\objects\oled.o: ..\HardWare\OLED.h
+.\objects\oled.o: ..\HardWare\ADC.h
 .\objects\oled.o: ..\HardWare\oledfont.h

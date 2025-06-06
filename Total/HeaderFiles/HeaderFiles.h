@@ -19,6 +19,7 @@
 #include "gd32f4xx_exti.h"//外部中断库
 #include "gd32f4xx_misc.h"//包含了外部中断的NVIC配置函数
 #include "gd32f4xx_usart.h"//串口的配置库函数
+#include "gd32f4xx_adc.h"//ADC的配置库函数
 #include "systick.h"
 #include <stdio.h>
 #include <stdint.h>
@@ -29,6 +30,7 @@
 #include "EXTI.h"
 #include "Serial.h"
 #include "OLED.h"
+#include "ADC.h"
 
 
 
