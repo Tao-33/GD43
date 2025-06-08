@@ -28,7 +28,8 @@ void UsrFunction(void)
 		if(KEY_State(GPIOE,KEY3_PIN)==1){
 		Led_OFF();		
 		}*/
-		/*串口测试
+		
+		/*串口测试，可以接收发送HEX数据包
 //		// 在主循环手动设置测试数据
 //		Serial_RxPacket[0] = 0xAA; 
 //		Serial_RxFlag = 1;
@@ -45,11 +46,20 @@ void UsrFunction(void)
 			
 		}
 		*/
+		
+		/*ADC功能测试，可以将ADC值通过串口发送，信息格式可以用Vofa+显示曲线
 		int adc_value;
 		adc_flag_clear(ADC0,ADC_FLAG_EOC);//清除标志位
 		while(SET!=adc_flag_get(ADC0,ADC_FLAG_EOC)){}
 		adc_value=ADC_RDATA(ADC0);			
 		printf("ADC_Value:%d,%.2f\n",adc_value,3.3*(adc_value/4095.0));
+		*/
+		
+		/*OLED测试，可以使用OLED_Printf()函数进行方便的OLED显示操作
+		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
+		OLED_Refresh();
+		*/
+		
 	}
 }
 

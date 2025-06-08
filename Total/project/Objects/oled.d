@@ -52,3 +52,5 @@
 .\objects\oled.o: ..\HardWare\OLED.h
 .\objects\oled.o: ..\HardWare\ADC.h
 .\objects\oled.o: ..\HardWare\oledfont.h
+.\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

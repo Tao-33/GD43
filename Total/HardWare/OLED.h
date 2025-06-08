@@ -51,13 +51,14 @@ void OLED_DrawPoint(u8 x,u8 y);
 void OLED_DrawLine(u8 x1,u8 y1,u8 x2,u8 y2);
 void OLED_DrawCircle(u8 x,u8 y,u8 r);
 void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 size1);
-void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 size1);
+void OLED_ShowString(u8 x,u8 y,char *chr,u8 size1);
 void OLED_ShowNum(u8 x,u8 y,u32 num,u8 len,u8 size1);
 void OLED_ShowHexNum(uint8_t Line, uint8_t Column, uint32_t Number, uint8_t Length);
 void OLED_ShowChinese(u8 x,u8 y,u8 num,u8 size1);
 void OLED_ScrollDisplay(u8 num,u8 space);
 void OLED_WR_BP(u8 x,u8 y);
 void OLED_ShowPicture(u8 x0,u8 y0,u8 x1,u8 y1,u8 BMP[]);
+void OLED_Printf(int16_t X, int16_t Y, uint8_t FontSize, char *format, ...);
 void OLED_Init(void);
 		    
 #endif

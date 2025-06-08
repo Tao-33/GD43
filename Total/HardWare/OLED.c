@@ -1,6 +1,9 @@
 #include "oled.h"
 #include "oledfont.h"
-
+#include <string.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdarg.h>
 u8 OLED_GRAM[144][4]; //128*32分辨率
 
 
@@ -352,7 +355,7 @@ void OLED_ShowChar(u8 x,u8 y,u8 chr,u8 size1)
 //x,y:起点坐标  
 //size1:字体大小 
 //*chr:字符串起始地址 
-void OLED_ShowString(u8 x,u8 y,u8 *chr,u8 size1)
+void OLED_ShowString(u8 x,u8 y,char *chr,u8 size1)
 {
 	while((*chr>=' ')&&(*chr<='~'))//判断是不是非法字符!
 	{
@@ -529,6 +532,33 @@ void OLED_ShowPicture(u8 x0,u8 y0,u8 x1,u8 y1,u8 BMP[])
      }
 	 }
 }
+
+/**
+  * 函    数：OLED使用printf函数打印格式化字符串（支持ASCII码和中文混合写入）
+  * 参    数：X 指定格式化字符串左上角的横坐标，范围：-32768~32767，屏幕区域：0~127
+  * 参    数：Y 指定格式化字符串左上角的纵坐标，范围：-32768~32767，屏幕区域：0~63
+  * 参    数：FontSize 指定字体大小
+  *           范围：OLED_8X16		宽8像素，高16像素
+  *                 OLED_6X8		宽6像素，高8像素
+  * 参    数：format 指定要显示的格式化字符串，范围：ASCII码可见字符或中文字符组成的字符串
+  * 参    数：... 格式化字符串参数列表
+  * 返 回 值：无
+  * 说    明：显示的中文字符需要在OLED_Data.c里的OLED_CF16x16数组定义
+  *           未找到指定中文字符时，会显示默认图形（一个方框，内部一个问号）
+  *           当字体大小为OLED_8X16时，中文字符以16*16点阵正常显示
+  *           当字体大小为OLED_6X8时，中文字符以6*8点阵显示'?'
+  * 说    明：调用此函数后，要想真正地呈现在屏幕上，还需调用更新函数
+  */
+void OLED_Printf(int16_t X, int16_t Y, uint8_t FontSize, char *format, ...)
+{
+	char String[256];						//定义字符数组
+	va_list arg;							//定义可变参数列表数据类型的变量arg
+	va_start(arg, format);					//从format开始，接收参数列表到arg变量
+	vsprintf(String, format, arg);			//使用vsprintf打印格式化字符串和参数列表到字符数组中
+	va_end(arg);							//结束变量arg
+	OLED_ShowString(X, Y, String,FontSize);//OLED显示字符数组（字符串）
+}
+
 /************************************************************ 
  * Function :       OLED_Init
  * Comment  :       1、实现端口初始化
