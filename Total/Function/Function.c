@@ -57,8 +57,10 @@ void UsrFunction(void)
 		
 		/*OLED测试，可以使用OLED_Printf()函数进行方便的OLED显示操作
 		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
-		OLED_Refresh();
+		OLED_Refresh(); 
 		*/
+		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
+		OLED_Refresh(); 
 		
 	}
 }

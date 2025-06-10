@@ -20,6 +20,7 @@
 #include "gd32f4xx_misc.h"//包含了外部中断的NVIC配置函数
 #include "gd32f4xx_usart.h"//串口的配置库函数
 #include "gd32f4xx_adc.h"//ADC的配置库函数
+#include "gd32f4xx_timer.h"
 #include "systick.h"
 #include <stdio.h>
 #include <stdint.h>
