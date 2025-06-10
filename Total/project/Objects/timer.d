@@ -45,8 +45,10 @@
 .\objects\timer.o: ..\Function\Function.h
 .\objects\timer.o: ..\HeaderFiles\HeaderFiles.h
 .\objects\timer.o: ..\HardWare\LED\LED.h
-.\objects\timer.o: ..\HardWare\Key.h
 .\objects\timer.o: ..\HardWare\EXTI.h
 .\objects\timer.o: ..\HardWare\Serial.h
 .\objects\timer.o: ..\HardWare\OLED.h
 .\objects\timer.o: ..\HardWare\ADC.h
+.\objects\timer.o: ..\HardWare\Timer.h
+.\objects\timer.o: ..\HardWare\Button.h
+.\objects\timer.o: ..\HardWare\Button1.h

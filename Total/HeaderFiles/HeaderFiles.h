@@ -27,12 +27,14 @@
 #include "string.h"
 #include "Function.h"     // Ö´ÐÐº¯Êý
 #include "LED.h"
-#include "Key.h"
+//#include "Key.h"
 #include "EXTI.h"
 #include "Serial.h"
 #include "OLED.h"
 #include "ADC.h"
-
+#include "Timer.h"
+#include "Button.h"
+#include "Button1.h"
 
 
 

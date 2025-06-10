@@ -51,3 +51,5 @@
 .\objects\key.o: ..\HardWare\Serial.h
 .\objects\key.o: ..\HardWare\OLED.h
 .\objects\key.o: ..\HardWare\ADC.h
+.\objects\key.o: ..\HardWare\Timer.h
+.\objects\key.o: ..\HardWare\Button.h

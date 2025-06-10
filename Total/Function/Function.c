@@ -1,17 +1,63 @@
 #include "HeaderFiles.h"
 #include "Function.h"
 
-
+int Key_num=0;
+void BTN1_SINGLEClick_Handler(void* btn)
+{
+	Key_num=1;
+}
+void BTN2_SINGLEClick_Handler(void* btn)
+{
+	Key_num=2;
+}
+void BTN3_SINGLEClick_Handler(void* btn)
+{
+	Key_num=3;
+}
+void BTN4_SINGLEClick_Handler(void* btn)
+{
+	Key_num=4;
+}
+void BTN5_SINGLEClick_Handler(void* btn)
+{
+	Key_num=5;
+}
+void BTN6_SINGLEClick_Handler(void* btn)
+{
+	Key_num=6;
+}
 
 void System_Init(void)
 {
 	systick_config();     // 时钟配置
 	Led_Init();
-	Key_Init();
+	KEY1_Init();
+	KEY2_Init();
 	EXTI_Pin_Init();
 	Serial_Init();
 	OLED_Init();
 	ADC_Port_Init();
+	//按键绑定操作
+	button_init(&btn1, read_button_GPIO, 0, btn1_id);
+	button_init(&btn2, read_button_GPIO, 0, btn2_id);
+	button_init(&btn3, read_button_GPIO, 0, btn3_id);
+	button_init(&btn4, read_button_GPIO, 0, btn4_id);
+	button_init(&btn5, read_button_GPIO, 0, btn5_id);
+	button_init(&btn6, read_button_GPIO, 0, btn6_id);
+	button_attach(&btn1, SINGLE_CLICK,BTN1_SINGLEClick_Handler);
+	button_attach(&btn2, SINGLE_CLICK,BTN2_SINGLEClick_Handler);
+	button_attach(&btn3, SINGLE_CLICK,BTN3_SINGLEClick_Handler);
+	button_attach(&btn4, SINGLE_CLICK,BTN4_SINGLEClick_Handler);
+	button_attach(&btn5, SINGLE_CLICK,BTN5_SINGLEClick_Handler);
+	button_attach(&btn6, SINGLE_CLICK,BTN6_SINGLEClick_Handler);
+	button_start(&btn1);
+	button_start(&btn2);
+	button_start(&btn3);
+	button_start(&btn4);
+	button_start(&btn5);
+	button_start(&btn6);
+	//*************************
+	TIM2_Init(240-1,1000-1);//开启按键的定时器
 
 }
 
@@ -59,9 +105,19 @@ void UsrFunction(void)
 		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
 		OLED_Refresh(); 
 		*/
-		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
-		OLED_Refresh(); 
 		
+		/* 定时中断测试
+		OLED_Printf(0, 16, 16, "cnt:%5d", cnt);
+		OLED_Refresh(); 
+		*/
+		
+		/*按键逻辑测试
+		OLED_Printf(0, 16, 16, "key_Num:%5d", Key_num);
+		OLED_Refresh(); 
+		*/
+		OLED_Printf(0, 0, 16, "cnt:%5d", cnt);
+		OLED_Printf(0, 16, 16, "key_Num:%5d", Key_num);
+		OLED_Refresh(); 
 	}
 }
 

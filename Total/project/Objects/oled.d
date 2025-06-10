@@ -46,11 +46,13 @@
 .\objects\oled.o: ..\Function\Function.h
 .\objects\oled.o: ..\HeaderFiles\HeaderFiles.h
 .\objects\oled.o: ..\HardWare\LED\LED.h
-.\objects\oled.o: ..\HardWare\Key.h
 .\objects\oled.o: ..\HardWare\EXTI.h
 .\objects\oled.o: ..\HardWare\Serial.h
 .\objects\oled.o: ..\HardWare\OLED.h
 .\objects\oled.o: ..\HardWare\ADC.h
+.\objects\oled.o: ..\HardWare\Timer.h
+.\objects\oled.o: ..\HardWare\Button.h
+.\objects\oled.o: ..\HardWare\Button1.h
 .\objects\oled.o: ..\HardWare\oledfont.h
 .\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

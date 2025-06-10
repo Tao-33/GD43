@@ -411,16 +411,6 @@
               <FilePath>..\HardWare\LED.c</FilePath>
             </File>
             <File>
-              <FileName>Key.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\HardWare\Key.h</FilePath>
-            </File>
-            <File>
-              <FileName>Key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HardWare\Key.c</FilePath>
-            </File>
-            <File>
               <FileName>EXTI.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HardWare\EXTI.h</FilePath>
@@ -474,6 +464,26 @@
               <FileName>Timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\HardWare\Timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>Button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\Button.c</FilePath>
+            </File>
+            <File>
+              <FileName>Button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\Button.h</FilePath>
+            </File>
+            <File>
+              <FileName>Button1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HardWare\Button1.c</FilePath>
+            </File>
+            <File>
+              <FileName>Button1.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\HardWare\Button1.h</FilePath>
             </File>
           </Files>
         </Group>
