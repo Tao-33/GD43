@@ -53,6 +53,7 @@
 .\objects\oled.o: ..\HardWare\Timer.h
 .\objects\oled.o: ..\HardWare\Button.h
 .\objects\oled.o: ..\HardWare\Button1.h
+.\objects\oled.o: ..\HardWare\RTC.h
 .\objects\oled.o: ..\HardWare\oledfont.h
 .\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\oled.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

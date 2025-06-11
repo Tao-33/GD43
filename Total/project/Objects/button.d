@@ -52,3 +52,4 @@
 .\objects\button.o: ..\HardWare\Timer.h
 .\objects\button.o: ..\HardWare\Button.h
 .\objects\button.o: ..\HardWare\Button1.h
+.\objects\button.o: ..\HardWare\RTC.h
