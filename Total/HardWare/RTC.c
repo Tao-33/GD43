@@ -13,6 +13,8 @@
 #define RTC_CLOCK_SOURCE_LXTAL		// 配置RTC时钟源，使用外部32.768KHz
 #define BKP_VALUE    0x32F0
 
+
+
 rtc_parameter_struct   rtc_initpara;//RTC初始化结构体
 rtc_alarm_struct  rtc_alarm;//闹钟配置结构体
 __IO uint32_t prescaler_a = 0, prescaler_s = 0;//预分频器
@@ -211,6 +213,12 @@ void rtc_setup(void)
 */
 }
 
+// 输入范围：0-99（超出范围需自行处理）
+uint8_t dec2bcd(uint8_t decimal) {
+    return ((decimal / 10) << 4) | (decimal % 10);
+}
+
+
 /*!
     \brief      display the current time
     \param[in]  none
@@ -229,7 +237,6 @@ void rtc_show_time(void)
 //    subsecond_ss=(1000-(time_subsecond*1000+1000)/400)/100;
 //    subsecond_ts=(1000-(time_subsecond*1000+1000)/400)%100/10;
 //    subsecond_hs=(1000-(time_subsecond*1000+1000)/400)%10;
-
 	OLED_Printf(0,0,12,"20%0.2x-%0.2x-%0.2x", 
            rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
 	OLED_Printf(0,13,12,"  %0.2x:%0.2x:%0.2x \r\n",
@@ -240,6 +247,22 @@ void rtc_show_time(void)
 
     printf(" : %0.2x:%0.2x:%0.2x \r\n", 
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+}
+
+void rtc_show_EXchange_time(void)
+{
+    rtc_current_time_get(&rtc_initpara);//调用库函数从硬件寄存器读取时间
+	OLED_Printf(0,0,12,"20%02d-%02d-%02d", 
+           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
+	OLED_Printf(0,13,12,"  %02d:%02d:%02d \r\n",
+           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+		OLED_Refresh();
+    printf("\r\nCurrent time: 20%02d-%02d-%02d", 
+           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
+
+    printf(" : %02d:%02d:%02d \r\n", 
+           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+	OLED_Refresh();
 }
 
 /*!
@@ -288,14 +311,14 @@ uint8_t usart_input_threshold(uint32_t value) {
 
 
 // 限制数值范围[min,max]
-int32_t CLAMP(int32_t value, int32_t min, int32_t max) {
+uint8_t CLAMP(uint8_t value, uint8_t min, int32_t max) {
     if (value < min) return min;
     if (value > max) return max;
     return value;
 }
 
 // 循环数值范围[min,max]
-int32_t CYCLIC(int32_t value, int32_t min, int32_t max) {
+uint8_t CYCLIC(uint8_t value, uint8_t min, uint8_t max) {
     if (value < min) return max;
     if (value > max) return min;
     return value;
@@ -358,9 +381,13 @@ void apply_rtc_changes(void) {
 			printf("\n\r** RTC time configuration failed! **\n\r");
 		}else{
 			printf("\n\r** RTC time configuration success! **\n\r");
-			rtc_show_time();
+			//rtc_show_time();
 			RTC_BKP0 = BKP_VALUE;
 		}
+}
+
+uint8_t bcd_to_decimal(uint8_t bcd) {
+    return ((bcd >> 4) * 10) + (bcd & 0x0F);
 }
 
 
@@ -368,29 +395,29 @@ void apply_rtc_changes(void) {
 void adjust_value(int8_t delta) {
     switch(current_state) {
         case ADJ_YEAR:
-            rtc_initpara.year = CLAMP(rtc_initpara.year + delta, 0, 99);
+            rtc_initpara.year = dec2bcd(CLAMP(bcd_to_decimal(rtc_initpara.year) + delta, 0, 99));
             break;
             
         case ADJ_MONTH:
-            rtc_initpara.month = CYCLIC(rtc_initpara.month + delta, 1, 12);
+            rtc_initpara.month = dec2bcd(CYCLIC(bcd_to_decimal(rtc_initpara.month) + delta, 1, 12));
             break;
             
         case ADJ_DAY: {
-            uint8_t max_day = get_max_day(2000 + rtc_initpara.year, rtc_initpara.month);
-            rtc_initpara.date = CLAMP(rtc_initpara.date + delta, 1, max_day);
+            uint8_t max_day = get_max_day(2000 + bcd_to_decimal(rtc_initpara.year), bcd_to_decimal(rtc_initpara.month));
+            rtc_initpara.date = dec2bcd(CLAMP(bcd_to_decimal(rtc_initpara.date) + delta, 1, max_day));
             break;
         }
             
         case ADJ_HOUR:
-            rtc_initpara.hour = CYCLIC(rtc_initpara.hour + delta, 0, 23);
+            rtc_initpara.hour = dec2bcd(CYCLIC(bcd_to_decimal(rtc_initpara.hour) + delta, 0, 23));
             break;
             
         case ADJ_MINUTE:
-            rtc_initpara.minute = CYCLIC(rtc_initpara.minute + delta, 0, 59);
+            rtc_initpara.minute =dec2bcd( CYCLIC(bcd_to_decimal(rtc_initpara.minute) + delta, 0, 59));
             break;
             
         case ADJ_SECOND:
-            rtc_initpara.second = CYCLIC(rtc_initpara.second + delta, 0, 59);
+            rtc_initpara.second = dec2bcd(CYCLIC(bcd_to_decimal(rtc_initpara.second) + delta, 0, 59));
             break;
             
         case ADJ_CONFIRM:
@@ -438,7 +465,7 @@ void handle_key_event(uint8_t key) {
 // 显示当前调整状态
 void show_adjust_status(void) {
 	
-    OLED_Printf(0,0,12," 20%02d-%02d-%02d %02d:%02d:%02d\n", 
+    OLED_Printf(0,0,12," 20%0.2x-%0.2x-%0.2x %0.2x:%0.2x:%0.2x\n", 
           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date,
           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 	OLED_Printf(0,12,12,"%d",current_state);

@@ -1,7 +1,7 @@
 #include "HeaderFiles.h"
 #include "Function.h"
 int FLAG=0;
-int Key_num=0;
+uint8_t Key_num=0;
 void BTN1_SINGLEClick_Handler(void* btn)
 {
 	Key_num=1;
@@ -131,10 +131,11 @@ void UsrFunction(void)
 		delay_1ms(1000);
 		*/
 		rtc_show_time();
-		delay_1ms(1000);		
+//		delay_1ms(1000);		
 		
 		//delay_1ms(1000);
 		if(Key_num==4){	
+		FLAG=1;
 		Key_num=0;
 //		rtc_setup();						
 		OLED_Clear();
@@ -146,6 +147,12 @@ void UsrFunction(void)
 		apply_rtc_changes();
 		OLED_Clear();
 		}
+
+//		for(int i=0;i<70;i++){
+//		OLED_Printf(0,0,12,"  %0.2x\r\n",dec2bcd(i));
+//		OLED_Refresh();
+//		}
+//		delay_1ms(300);
 	}
 }
 
