@@ -3,6 +3,20 @@
 #define __RTC_H
 #include "HeaderFiles.h"
 
+// 调整状态枚举
+typedef enum {
+    ADJ_YEAR,
+    ADJ_MONTH,
+    ADJ_DAY,
+    ADJ_HOUR,
+    ADJ_MINUTE,
+    ADJ_SECOND,
+    ADJ_CONFIRM
+} AdjustState;
+extern AdjustState current_state;
+
+
+
 void RTC_Init(void);	// RTC初始化
 void rtc_setup(void);	// RTC时钟设置
 void rtc_show_time(void);	// RTC时间
@@ -25,4 +39,6 @@ void adjust_value(int8_t delta) ;
 void handle_key_event(uint8_t key) ;
 // 显示当前调整状态
 void show_adjust_status(void);
+
+void KEY_Adjust(void);
 #endif

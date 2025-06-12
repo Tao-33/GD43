@@ -18,16 +18,7 @@ rtc_alarm_struct  rtc_alarm;//闹钟配置结构体
 __IO uint32_t prescaler_a = 0, prescaler_s = 0;//预分频器
 uint32_t RTCSRC_FLAG = 0;
 
-// 调整状态枚举
-typedef enum {
-    ADJ_YEAR,
-    ADJ_MONTH,
-    ADJ_DAY,
-    ADJ_HOUR,
-    ADJ_MINUTE,
-    ADJ_SECOND,
-    ADJ_CONFIRM
-} AdjustState;
+
 
 AdjustState current_state = ADJ_YEAR;
 
@@ -239,16 +230,15 @@ void rtc_show_time(void)
 //    subsecond_ts=(1000-(time_subsecond*1000+1000)/400)%100/10;
 //    subsecond_hs=(1000-(time_subsecond*1000+1000)/400)%10;
 
-	   OLED_Printf(0,0,12," 20%0.2x-%0.2x-%0.2x", 
+	OLED_Printf(0,0,12," 20%02d-%02d-%02d", 
            rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
-
-    OLED_Printf(0,13,12," : %0.2x:%0.2x:%0.2x \r\n", 
+	OLED_Printf(0,13,12," : %02d:%02d:%02d \r\n",
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 	OLED_Refresh();
-    printf("\r\nCurrent time: 20%0.2x-%0.2x-%0.2x", 
+    printf("\r\nCurrent time:  20%02d-%02d-%02d", 
            rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
 
-    printf(" : %0.2x:%0.2x:%0.2x \r\n", \
+    printf(" : %02d:%02d:%02d \r\n", \
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 }
 
@@ -272,54 +262,27 @@ void rtc_show_alarm(void)
     \retval     input value in BCD mode
 */
 
-//串口获取信息验证
-//uint8_t usart_input_threshold(uint32_t value)
-//{
-//    uint32_t index = 0;
-//    uint32_t tmp[2] = {0, 0};
 
-//    while (index < 2){
-//        while (RESET == usart_flag_get(USART0, USART_FLAG_RBNE));
-//        tmp[index++] = data_recv;//********************************这里改动了
-//        if ((tmp[index - 1] < 0x30) || (tmp[index - 1] > 0x39)){
-//            printf("\n\r please input a valid number between 0 and 9 \n\r");
-//            index--;
-//        }
-//    }
-
-//    index = (tmp[1] - 0x30) + ((tmp[0] - 0x30) * 10);
-//    if (index > value){
-//        printf("\n\r please input a valid number between 0 and %d \n\r", value);
-//        return 0xFF;
-//    }
-
-//    index = (tmp[1] - 0x30) + ((tmp[0] - 0x30) <<4);
-//    return index;
-//}
 
 uint8_t usart_input_threshold(uint32_t value) {
     uint8_t tmp[2] = {0};
-
-    for(int i=0; i<2; ) {
-        if(data_ready) {  // 检查中断标志
+	int i=0;
+	while(i < 2) {
+        if(data_ready) {
             tmp[i] = data_recv;
             data_ready = 0;
             
             if(tmp[i] >= 0x30 && tmp[i] <= 0x39) {
-                i++; // 仅接受数字
-            } else {
-                printf("\n\rInvalid input (0-9)\n\r");
-            }
-        }
-        
+					i++; // 仅接受数字
+			}
+		}       
     }
-
+	//防止超限
     uint8_t decimal = (tmp[0]-0x30)*10 + (tmp[1]-0x30);
     if(decimal > value) {
         printf("\n\rInput exceed %d\n\r", value);
         return 0xFF;
     }
-    
     return ((tmp[0]-0x30)<<4) | (tmp[1]-0x30); // 正确BCD编码
 }
 
@@ -347,24 +310,59 @@ uint8_t get_max_day(uint16_t year, uint8_t month) {
     return days[month-1];
 }
 
-// 应用RTC修改
+
+//// 应用RTC修改
+//void apply_rtc_changes(void) {
+//    /* enable PMU clock */
+//    rcu_periph_clock_enable(RCU_PMU);//使能电源管理单元
+//    /* enable the access of the RTC registers */
+//    pmu_backup_write_enable();//解锁备份域写保护
+//    
+//    /* 配置RTC */
+//	rtc_current_time_get(&rtc_initpara);//调用库函数从硬件寄存器读取时间
+//    if(ERROR == rtc_init(&rtc_initpara)) {
+//        OLED_Printf(0,0,16,"RTC config failed!\n");
+//    } else {
+////        OLED_Printf(0,0,12," 20%02d-%02d-%02d %02d:%02d:%02d\n", 
+////              rtc_initpara.year, rtc_initpara.month, rtc_initpara.date,
+////              rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+//        rtc_show_time();
+//        RTC_BKP0 = BKP_VALUE;
+//    }
+////	OLED_Refresh();
+//}
+
+
+
 void apply_rtc_changes(void) {
-    /* 使能备份域访问 */
-//    rcu_periph_clock_enable(RCU_PWR);
-//    pwr_backup_access_enable();
-    
-    /* 配置RTC */
-	rtc_current_time_get(&rtc_initpara);//调用库函数从硬件寄存器读取时间
-    if(ERROR == rtc_init(&rtc_initpara)) {
-        OLED_Printf(0,0,16,"RTC config failed!\n");
-    } else {
-        OLED_Printf(0,0,12," 20%02d-%02d-%02d %02d:%02d:%02d\n", 
-              rtc_initpara.year, rtc_initpara.month, rtc_initpara.date,
-              rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
-        RTC_BKP0 = BKP_VALUE;
-    }
-	OLED_Refresh();
+//		rtc_initpara.factor_asyn = prescaler_a;//用之前算的分频值
+//		rtc_initpara.factor_syn = prescaler_s;
+//		rtc_initpara.year = 0x16;//默认年份2016
+//		rtc_initpara.day_of_week = RTC_SATURDAY;//默认周六
+//		rtc_initpara.month = RTC_APR;//默认四月
+//		rtc_initpara.date = 0x30;//30日
+//		rtc_initpara.display_format = RTC_24HOUR;//24小时制
+//		rtc_initpara.am_pm = RTC_AM;
+        
+        /* 从硬件读取当前时间 */
+   //     rtc_current_time_get(&rtc_initpara);
+
+        if(ERROR == rtc_init(&rtc_initpara)) {
+            OLED_Printf(0,0,16,"RTC config failed!\n");
+			OLED_Refresh();
+        } else {
+            rtc_show_time();
+            RTC_BKP0 = BKP_VALUE; // 标记配置完成
+        }
+       if(ERROR == rtc_init(&rtc_initpara)){
+			printf("\n\r** RTC time configuration failed! **\n\r");
+		}else{
+			printf("\n\r** RTC time configuration success! **\n\r");
+			rtc_show_time();
+			RTC_BKP0 = BKP_VALUE;
+		}
 }
+
 
 // 调整数值
 void adjust_value(int8_t delta) {
@@ -405,15 +403,15 @@ void adjust_value(int8_t delta) {
 void handle_key_event(uint8_t key) {
     switch(key) {
         case 1: // 切换调整项
-            //current_state = (current_state + 1) % (ADJ_CONFIRM + 1);
-			// 方案2：使用标准状态机切换方式（推荐）
-			if(current_state < ADJ_CONFIRM) {
-			current_state = (AdjustState)(current_state + 1);
-			} 
-			else {
-			current_state = ADJ_CONFIRM; // 复位到确认
-			}
-			Key_num=0;
+			 if(current_state < ADJ_CONFIRM) {
+                current_state = (AdjustState)(current_state + 1);
+                if(current_state == ADJ_CONFIRM) {
+                    //apply_rtc_changes(); // 到达确认状态时保存配置
+                }
+            } else {
+                current_state = ADJ_YEAR; // 完成配置后回到初始状态
+            }
+            Key_num=0;
             break;
 		
 			case 2: // 数值增加
@@ -443,6 +441,7 @@ void show_adjust_status(void) {
     OLED_Printf(0,0,12," 20%02d-%02d-%02d %02d:%02d:%02d\n", 
           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date,
           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
+	OLED_Printf(0,12,12,"%d",current_state);
 	OLED_Refresh();
 }
 

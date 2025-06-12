@@ -43,7 +43,7 @@ void System_Init(void)
 	OLED_Init();
 	DMA_ADC_config_Init();
 	RTC_Init();	
-	//按键绑定操作
+	//按键绑定操作*****************************************
 	button_init(&btn1, read_button_GPIO, 0, btn1_id);
 	button_init(&btn2, read_button_GPIO, 0, btn2_id);
 	button_init(&btn3, read_button_GPIO, 0, btn3_id);
@@ -63,7 +63,7 @@ void System_Init(void)
 	button_start(&btn4);
 	button_start(&btn5);
 	button_start(&btn6);
-	//*************************
+	//**************************************************
 	TIM2_Init(240-1,3000-1);//开启按键的定时器
 }
 
@@ -71,7 +71,7 @@ void UsrFunction(void)
 {
 
 	printf("Hello CIMC");
-	rtc_setup();
+	//rtc_setup();
 
 	while(1)
 	{
@@ -130,20 +130,21 @@ void UsrFunction(void)
 		rtc_show_time();
 		delay_1ms(1000);
 		*/
-		
+		rtc_show_time();
+		delay_1ms(1000);		
 		
 		//delay_1ms(1000);
-		if(Key_num==4||FLAG==1){
-		FLAG=1;
+		if(Key_num==4){	
 		Key_num=0;
-		//OLED_Clear();
+//		rtc_setup();						
+		OLED_Clear();
+		current_state = ADJ_YEAR;
+		while(current_state <ADJ_CONFIRM){
 		handle_key_event(Key_num);
 		show_adjust_status();
-		OLED_Printf(0, 16, 16, "key_Num:%d", Key_num);
-//		rtc_show_time();
 		}
-		else{
-		rtc_show_time();
+		apply_rtc_changes();
+		OLED_Clear();
 		}
 	}
 }
