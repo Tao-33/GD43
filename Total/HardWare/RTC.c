@@ -230,15 +230,15 @@ void rtc_show_time(void)
 //    subsecond_ts=(1000-(time_subsecond*1000+1000)/400)%100/10;
 //    subsecond_hs=(1000-(time_subsecond*1000+1000)/400)%10;
 
-	OLED_Printf(0,0,12," 20%02d-%02d-%02d", 
+	OLED_Printf(0,0,12,"20%0.2x-%0.2x-%0.2x", 
            rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
-	OLED_Printf(0,13,12," : %02d:%02d:%02d \r\n",
+	OLED_Printf(0,13,12,"  %0.2x:%0.2x:%0.2x \r\n",
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 	OLED_Refresh();
-    printf("\r\nCurrent time:  20%02d-%02d-%02d", 
+    printf("\r\nCurrent time: 20%0.2x-%0.2x-%0.2x", 
            rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
 
-    printf(" : %02d:%02d:%02d \r\n", \
+    printf(" : %0.2x:%0.2x:%0.2x \r\n", 
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 }
 
@@ -251,7 +251,7 @@ void rtc_show_time(void)
 void rtc_show_alarm(void)
 {
     rtc_alarm_get(RTC_ALARM0,&rtc_alarm);
-    printf("The alarm: %0.2x:%0.2x:%0.2x \n\r", rtc_alarm.alarm_hour, rtc_alarm.alarm_minute,\
+    printf("The alarm: %0.2x:%0.2x:%0.2x \n\r", rtc_alarm.alarm_hour, rtc_alarm.alarm_minute,
            rtc_alarm.alarm_second);
 }
 

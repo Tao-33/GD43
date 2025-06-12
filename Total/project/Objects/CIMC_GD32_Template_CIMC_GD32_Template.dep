@@ -569,7 +569,7 @@ I (..\HardWare\Timer.h)(0x68482F85)
 I (..\HardWare\Button.h)(0x68483E0F)
 I (..\HardWare\RTC.h)(0x684A8E8D)
 F (..\HardWare\Button1.h)(0x6848407B)()
-F (..\HardWare\RTC.c)(0x684A9A10)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\rtc.o --omf_browse .\objects\rtc.crf --depend .\objects\rtc.d)
+F (..\HardWare\RTC.c)(0x684AACF2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\CMSIS -I ..\Startup -I ..\Library\GD32F4xx_standard_peripheral\Include -I ..\User -I ..\HeaderFiles -I ..\Function -I ..\HardWare\LED -I ..\CMSIS\GD\GD32F4xx\Include -I ..\HardWare -I ..\HardWare-I.\RTE\_CIMC_GD32_Template-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include-D__UVISION_VERSION="524" -D_RTE_ -DGD32F470 -DUSE_STDPERIPH_DRIVER -DGD32F470-o .\objects\rtc.o --omf_browse .\objects\rtc.crf --depend .\objects\rtc.d)
 I (..\HardWare\RTC.h)(0x684A8E8D)
 I (..\HeaderFiles\HeaderFiles.h)(0x6849787C)
 I (..\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x67D920AC)
