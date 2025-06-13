@@ -41,6 +41,8 @@ void System_Init(void)
 	Serial_Init();
 //	gd_eval_com_init();
 	OLED_Init();
+//	ADC_Port_Init();
+	ADC_Init();
 	DMA_ADC_config_Init();
 	RTC_Init();	
 	//按键绑定操作*****************************************
@@ -73,6 +75,7 @@ void UsrFunction(void)
 	printf("Hello CIMC");
 	//rtc_setup();
 
+	
 	while(1)
 	{
 		
@@ -110,7 +113,6 @@ void UsrFunction(void)
 		OLED_Printf(0,16,16,"ADC_V:%d,%.2f\n",adc_value[0],3.3*(adc_value[0]/4095.0));
 		OLED_Refresh(); 
 		*/
-		
 		/*OLED测试，可以使用OLED_Printf()函数进行方便的OLED显示操作
 		OLED_Printf(0, 16, 16, "Ki:%4.2f Ki:%d", 23.33,5);
 		OLED_Refresh(); 
@@ -131,13 +133,12 @@ void UsrFunction(void)
 		delay_1ms(1000);
 		*/
 		rtc_show_time();
-//		delay_1ms(1000);		
+		delay_1ms(1000);
+		/*	按键设置RTC时间测试，按下按键四开始设定时间，设定完毕后使用showtime即可显示更改后时间
 		
-		//delay_1ms(1000);
 		if(Key_num==4){	
 		FLAG=1;
-		Key_num=0;
-//		rtc_setup();						
+		Key_num=0;						
 		OLED_Clear();
 		current_state = ADJ_YEAR;
 		while(current_state <ADJ_CONFIRM){
@@ -147,14 +148,13 @@ void UsrFunction(void)
 		apply_rtc_changes();
 		OLED_Clear();
 		}
+		*/
 
-//		for(int i=0;i<70;i++){
-//		OLED_Printf(0,0,12,"  %0.2x\r\n",dec2bcd(i));
-//		OLED_Refresh();
-//		}
-//		delay_1ms(300);
 	}
 }
+
+
+
 
 
 

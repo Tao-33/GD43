@@ -249,21 +249,6 @@ void rtc_show_time(void)
            rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
 }
 
-void rtc_show_EXchange_time(void)
-{
-    rtc_current_time_get(&rtc_initpara);//调用库函数从硬件寄存器读取时间
-	OLED_Printf(0,0,12,"20%02d-%02d-%02d", 
-           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
-	OLED_Printf(0,13,12,"  %02d:%02d:%02d \r\n",
-           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
-		OLED_Refresh();
-    printf("\r\nCurrent time: 20%02d-%02d-%02d", 
-           rtc_initpara.year, rtc_initpara.month, rtc_initpara.date);
-
-    printf(" : %02d:%02d:%02d \r\n", 
-           rtc_initpara.hour, rtc_initpara.minute, rtc_initpara.second);
-	OLED_Refresh();
-}
 
 /*!
     \brief      display the alram value
